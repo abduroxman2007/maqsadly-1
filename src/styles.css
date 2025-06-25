@@ -640,23 +640,17 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  background: none;
-  padding: 3rem 0;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  transform: none;
-}
-
-/* Remove animate-up from teacher-item if present */
-.teacher-item.animate-up {
-  animation: none !important;
+  background: var(--card-bg, #fff);
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  border: 1px solid #ececec;
+  transition: box-shadow 0.2s;
+  position: relative;
 }
 
 .teacher-item:hover {
-  transform: none;
-  box-shadow: none;
+  box-shadow: 0 8px 32px rgba(184,135,70,0.13);
 }
 
 .teacher-item.reverse {
@@ -670,24 +664,46 @@ body {
 .teacher-image {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 .teacher-image img {
   width: 100%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
-  transition: all 0.3s ease-in-out;
+  border-radius: 16px;
+  display: block;
 }
 
-.teacher-item:hover .teacher-image img {
-  transform: none;
+.teacher-logo-corner {
+  position: absolute;
+  top: 10px!important;
+  left: 5px!important;
+  width: 150px!important;
+  height: 150px!important;
+  object-fit: cover!important;
+  border-radius: 100px!important;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  border: 2px solid #ececec;
+  z-index: 10;
+  transform: translateY(0);
+}
+.teacher-logo-corner.right {
+  left: auto!important;
+  right: 5px!important;
+}
+[data-theme="dark"] .teacher-logo-corner {
+  background: #222;
+  border: 2px solid #444;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
 }
 
 .teacher-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--text-color);
+  font-weight: 700;
 }
 
 .teacher-title {
@@ -711,9 +727,160 @@ body {
 
 .achievement {
   color: var(--text-color);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 6px 14px;
+  display: inline-block;
 }
+
+
+
+/* Image-only Swiper for Teachers (3 per view, minimal overlay) */
+.teacherimg-swiper-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
+  position: relative;
+}
+.teacherimg-swiper {
+  width: 100%;
+  padding-bottom: 0;
+}
+.teacherimg-swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #222;
+}
+.teacherimg-swiper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+  transition: filter 0.3s;
+}
+.teacherimg-swiper-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+.teacherimg-swiper-slide:hover .teacherimg-swiper-img,
+.teacherimg-swiper-slide:focus-within .teacherimg-swiper-img {
+  filter: brightness(0.45);
+}
+.teacherimg-swiper-slide:hover .teacherimg-swiper-overlay,
+.teacherimg-swiper-slide:focus-within .teacherimg-swiper-overlay {
+  opacity: 1;
+}
+.teacherimg-swiper-overlay-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+.teacherimg-swiper-overlay-title {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+.teacherimg-swiper-overlay-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.teacherimg-swiper-overlay-feature {
+  font-size: 0.98rem;
+  color: #fff;
+  font-weight: 500;
+  max-width: 320px;
+  word-break: break-word;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .teacherimg-swiper-section {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+  .teacherimg-swiper-slide {
+    height: 340px;
+    border-radius: 14px;
+  }
+  .teacherimg-swiper-img {
+    border-radius: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .teacherimg-swiper-slide {
+    height: 260px;
+  }
+}
+@media (max-width: 700px) {
+  .teacherimg-swiper-slide {
+    height: 180px;
+  }
+  .teacherimg-swiper-overlay-name {
+    font-size: 1.1rem;
+  }
+  .teacherimg-swiper-overlay-title {
+    font-size: 0.95rem;
+  }
+  .teacherimg-swiper-overlay-feature {
+    font-size: 0.92rem;
+  }
+}
+
+/* Move Swiper pagination dots below the images for teacher image Swiper */
+.teacherimg-swiper .swiper-pagination {
+  position: static !important;
+  margin-top: 18px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .teacherimg-swiper .swiper-pagination {
+    margin-top: 10px;
+  }
+}
+
+/* Dark mode overrides for Teachers section */
+[data-theme="dark"] .teacher-item {
+  background: #2a2a2a !important;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18) !important;
+  border-color: #444 !important;
+}
+[data-theme="dark"] .teacher-info h3,
+[data-theme="dark"] .teacher-title,
+[data-theme="dark"] .teacher-description,
+[data-theme="dark"] .achievement {
+  color: #fff !important;
+}
+[data-theme="dark"] .achievement {
+  background: #353535 !important;
+  color: #fff !important;
+}
+
 
 /* Courses Section */
 .courses {
@@ -1510,86 +1677,123 @@ body {
   color: #fff;
 }
 
-.mission-section {
-  padding: 6rem 2rem 4rem;
-  background: var(--bg-color);
-}
-.mission-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.mission-left h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-[data-theme="dark"] .mission-left h2 {
-  color: #fff;
-}
-.mission-left p {
-  color: var(--text-light);
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-.mission-right {
+/* About section feature */
+
+.about-features {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mission-image {
-  width: 440px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: var(--shadow-lg);
-  max-width: 100%;
-}
-@media (max-width: 900px) {
-  .mission-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
-  .mission-left {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .mission-right {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  .mission-image {
-    width: 95vw;
-    height: 220px;
-    max-width: 95vw;
-  }
-}
-@media (max-width: 600px) {
-  .mission-section {
-    padding: 2rem 0.5rem 1rem;
-  }
-  .mission-image {
-    width: 100vw;
-    height: 160px;
-    max-width: 100vw;
-  }
-  .mission-left h2 {
-    font-size: 1.5rem;
-  }
-  .mission-left p {
-    font-size: 1rem;
-  }
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
-[data-theme="dark"] .mission-left h2,
-[data-theme="dark"] .mission-left p {
-  color: #fff !important;
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #111;
+  animation: fadeInLeft 0.7s both;
 }
+[data-theme="dark"] .about-feature{
+  color: white
+}
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  animation: iconPop 1s infinite alternate;
+}
+
+@keyframes iconPop {
+  0% { transform: scale(1);}
+  100% { transform: scale(1.15);}
+}
+
+.about-icon-animate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: iconPop 1.2s infinite alternate;
+}
+@keyframes iconPop {
+  0% { transform: scale(1);}
+  100% { transform: scale(1.13);}
+}
+
+/* MIssion Seciton */
+.mission-section-minimal {
+  background: var(--bg-secondary);
+  padding: 80px 0 60px 0;
+  text-align: center;
+}
+/* class: mission-section-minimal */
+
+.mission-container-minimal {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+/* class: mission-container-minimal */
+
+.mission-icon {
+  margin-bottom: 24px;
+}
+/* class: mission-icon */
+
+.mission-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+  white-space: nowrap;
+}
+/* class: mission-title */
+
+.mission-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #b88746 0%, #fdf5a6 100%);
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+}
+/* class: mission-underline */
+
+.mission-statement {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 16px;
+}
+/* class: mission-statement */
+
+.mission-subtext {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 0;
+}
+/* class: mission-subtext */
+
+@media (max-width: 900px) {
+  .mission-title {
+    font-size: 2rem;
+  }
+}
+/* class: mission-title (responsive) */
+
+@media (max-width: 600px) {
+  .mission-title {
+    font-size: 1.1rem;
+  }
+}
+/* class: mission-title (responsive) */
+
 
 .why-different-section {
   padding: 6rem 2rem 4rem;
@@ -1739,7 +1943,8 @@ body {
     padding: 1.2rem 0.7rem 1rem 0.7rem;
   }
   .why-different-container h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color) !important;
   }
 }
 
@@ -2092,4 +2297,8 @@ body {
 
 [data-theme="dark"] .timeline-title {
   color: #fff;
+}
+
+[data-theme="dark"] h1.timeline-title {
+  color: #fff !important;
 }

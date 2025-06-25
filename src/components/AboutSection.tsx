@@ -1,10 +1,11 @@
 import React from 'react';
 import { useTranslation } from '../TranslationContext';
+import AboutFeatureIcon from './AboutFeatureIcon';
 
 const AboutSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section id="about" className="about" data-animate="fade-in-up">
+    <section id="about" className="about">
       <div className="about-container">
         <div className="about-header" data-animate="center">
           <h2>{t('about-title')}</h2>
@@ -12,14 +13,26 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="about-content">
           <div className="about-text" data-animate="left">
-            <p>{t('about-description')}</p>
-            <h3>{t('who-for-title')}</h3>
-            <ul>
-              <li>{t('for-item1')}</li>
-              <li>{t('for-item2')}</li>
-              <li>{t('for-item3')}</li>
-              <li>{t('for-item4')}</li>
-            </ul>
+            {/* <p>{t('about-description')}</p>
+            <h3>{t('who-for-title')}</h3> */}
+            <div className="about-features">
+              <div className="about-feature" data-animate="left">
+                <AboutFeatureIcon type='check' />
+                <span><b>{t('for-item1')}</b></span>
+              </div>
+              <div className="about-feature" data-animate="left">
+              <AboutFeatureIcon type='circles' />
+                <span><b>{t('for-item2')}</b></span>
+              </div>
+              <div className="about-feature" data-animate="left">
+              <AboutFeatureIcon type='globe' />
+                <span><b>{t('for-item3')}</b></span>
+              </div>
+              <div className="about-feature" data-animate="left">
+              <AboutFeatureIcon type='book' />
+                <span><b>{t('for-item4')}</b></span>
+              </div>
+            </div>
           </div>
           <div className="about-form" data-animate="right">
             <h3>{t('get-started')}</h3>
