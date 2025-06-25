@@ -72,7 +72,7 @@ export const translations = {
     "start-journey": "Start Your Journey",
     // Teachers Section
     "teachers-title": "Meet Our Course Mentors",
-    "teachers-title2": "Our Admission Mentors",
+    "teachers-title2": "Our guest speakers",
     "teacher1-name": "Olimjon Uvayzov",
     "teacher1-title": "SAT English Expert",
     "teacher1-description": "With 750 in EBRW on the SAT and 1,5 years of teaching experience, Olimjon has designed a special 2-month curriculum for the August test takers, which will navigate the students from mastering time management techniques to analyzing excerpts from scholarly ancient texts – a unique approach to tackle even the most subtle inference and vocabulary-in-context questions <br/> <br/> Olimjon will conduct special classes on practice + analysis where students can witness how he solves questions and learn the way he analyzes them. At Maqsadly, he is dedicated to closely tracking each student's progress and offering personalized support to ensure every student reaches their highest potential.",
@@ -258,6 +258,7 @@ export const translations = {
     "start-journey": "Начните Свой Путь",
     // Teachers Section
     "teachers-title": "Познакомьтесь с нашими экспертами",
+    "teachers-title2": "Наши гости",
     "teacher1-name": "Олимжон Увайзов",
     "teacher1-title": "Эксперт по SAT English",
     "teacher1-description": "Олимжон Увайзов набрал 750 баллов по EBRW на SAT и имеет 1,5 года преподавательского опыта. Он разработал специальную 2-месячную программу для сдающих экзамен в августе, которая охватывает тайм-менеджмент и анализ сложных текстов — уникальный подход для решения даже самых сложных вопросов на понимание и лексику. Олимжон проводит специальные занятия по практике и анализу, где студенты могут увидеть его методы решения и анализа. В Maqsadly он внимательно отслеживает прогресс каждого студента и оказывает персональную поддержку для достижения максимальных результатов.",
@@ -443,6 +444,7 @@ export const translations = {
     "start-journey": "Safaringizni Boshlang",
     // Teachers Section
     "teachers-title": "Bizning ekspert o'qituvchilarimiz bilan tanishing",
+    "teachers-title2": "Bizning gostlarimiz",
     "teacher1-name": "Olimjon Uvayzov",
     "teacher1-title": "SAT English mutaxassisi",
     "teacher1-description": "Olimjon Uvayzov SAT EBRW bo'yicha 750 ball va 1,5 yillik tajribaga ega. U avgust imtihoniga mo'ljallangan maxsus 2 oylik dastur tuzgan bo'lib, bu dastur talabalarni vaqtni boshqarishdan tortib, ilmiy matnlarni chuqur tahlil qilishgacha o'rgatadi — bu eng murakkab savollarni ham yechishga yordam beradi. Olimjon amaliy va tahliliy darslar o'tkazadi, talabalar uning savollarni qanday yechishini va tahlil qilish usullarini o'rganishadi. Maqsadlyda u har bir talabani shaxsiy rivojlanishini diqqat bilan kuzatadi va maksimal natijaga erishish uchun individual yordam ko'rsatadi.",
@@ -501,9 +503,9 @@ export const translations = {
     "full-feature3": "✓ 50+ amaliy test",
     "full-feature4": "✓ Shaxsiy o'qituvchi yordami",
     "full-feature5": "✓ Natija kafolati",
-    "ultimate-feature1": "✓ To‘liq SAT kursining barcha imkoniyatlari",
-    "ultimate-feature2": "✓ Universitetga hujjat topshirishda yo‘l-yo‘riq",
-    "ultimate-feature3": "✓ Insho yozish bo‘yicha ustaxonalar",
+    "ultimate-feature1": "✓ To'liq SAT kursining barcha imkoniyatlari",
+    "ultimate-feature2": "✓ Universitetga hujjat topshirishda yo'l-yo'riq",
+    "ultimate-feature3": "✓ Insho yozish bo'yicha ustaxonalar",
     "ultimate-feature4": "✓ Stipendiyaga ariza topshirishda yordam",
     "ultimate-feature5": "✓ Suhbatga tayyorgarlik",
     "ultimate-feature6": "✓ Shaxsiy qabul strategiyasi",

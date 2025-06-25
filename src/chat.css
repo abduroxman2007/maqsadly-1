@@ -1,14 +1,14 @@
-
-  
-  .msger {
-    
+  :root {
     --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     /* --bg-secondary: linear-gradient(135deg, rgb(245, 247, 250) 0%, rgb(195, 207, 226) 100%); */
     --msger-bg: #f8f9fa;
-    --border: 2px solid #b88746;
+    --border: 2px solid #33595E;
     --left-msg-bg: white;
-    --right-msg-bg: linear-gradient(45deg,#b88746 0%, #fdf5a6 130%);
+    --right-msg-bg: linear-gradient(45deg,#33595E 0%, #5a8a92 130%);
     --text-color: #072c50;
+  }
+  
+  .msger {
     
     display: flex;
     flex-flow: column wrap;
@@ -117,9 +117,9 @@
     margin: 0 0 0 10px;
     
     /* background: size 100% !important; */
-    /* background:linear-gradient(45deg, #b88746 0%, #fdf5a6 0%); */
+    /* background:linear-gradient(45deg, #33595E 0%, #5a8a92 0%); */
     /* background: var(--right-msg-bg)!important; */
-    background-image: url("/public/assets/img/graduate-hat.png"),linear-gradient(45deg, #b88746 0%, #fdf5a6 130%) ;
+    background-image: url("/public/assets/img/graduate-hat.png"),linear-gradient(45deg, #33595E 0%, #5a8a92 130%) ;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     border-radius: 50%;
@@ -132,5 +132,10 @@
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.left-msg .msg-bubble,
+.right-msg .msg-bubble {
+    word-break: break-word; /* allow long words to break */
 }
 

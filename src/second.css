@@ -228,3 +228,12 @@ body {
       transform: translateY(0);
   }
 }
+
+.hero-section .hero-left {
+  max-width: 50%;
+  padding-right: 2rem;
+  /* padding-left: 5rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

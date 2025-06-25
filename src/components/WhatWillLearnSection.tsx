@@ -6,7 +6,7 @@ const WhatWillLearnSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="what-will-learn-section" style={{ background: 'var(--bg-color)', padding: '64px 0 80px 0', overflow: 'visible' }}>
+    <section className="what-will-learn-section" style={{ background: 'var(--bg-color)', padding: '64px 0 80px 0', overflow: 'visible' }} data-animate="fade-in-up">
       <div className="what-will-learn-container" style={{ maxWidth: '1300px', margin: '0 auto', textAlign: 'center', padding: '0 100px', overflow: 'visible' }}>
         <div data-animate="center" style={{ marginBottom: '40px' }}>
           <p className="section-subheader" style={{ fontSize: '1.3rem', color: 'var(--secondary-color)', fontWeight: 500, marginBottom: '10px' }}>{t('learn-subtitle')}</p>

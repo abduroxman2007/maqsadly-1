@@ -324,6 +324,7 @@ html {
 
 .trust-badge-icon[data-animate].visible {
   transform: translate(0);
+  color: #33595E;
 }
 
 /* Text line animations */
@@ -642,4 +643,19 @@ html {
 [data-animate].visible,
 .animated-line.visible {
   will-change: auto;
+}
+
+[data-animate="fade-in-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  filter: blur(8px);
+  transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
+              filter 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-animate="fade-in-up"].visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }

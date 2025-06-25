@@ -5,7 +5,7 @@ const MissionSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="mission-section" className="mission-section">
+    <section className="mission-section" data-animate="fade-in-up">
       <div className="mission-container">
         <div className="mission-left" data-animate="left">
           <h2>{t('mission-title')}</h2>

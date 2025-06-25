@@ -1,10 +1,9 @@
-
 /* Blue + Purple */
 :root {
   /* --primary-color: #072c50; */
   --primary-color: black;
-  --secondary-color: #b88746;
-  --accent-color: #fdf5a6;
+  --secondary-color: #33595E;
+  --accent-color: #5a8a92;
   --text-color: black;
   --text-light: #6b7280;
   --bg-color: #fff;
@@ -16,14 +15,14 @@
 }
 [data-theme="dark"] {
   --text-color: #fff;
-  --text-light: #b88746;
+  --text-light: #cccccc;
   /* --bg-color: #072c50;
   --bg-secondary: #0b1e3c; */
   --bg-color: black;
   --bg-secondary: black;
-  --border-color: #b88746;
-  --shadow: 0 4px 6px -1px rgba(189, 135, 70, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(189, 135, 70, 0.25);
+  --border-color: #33595E;
+  --shadow: 0 4px 6px -1px rgba(51, 89, 94, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(51, 89, 94, 0.25);
 }
 
 /* [data-theme="dark"] {
@@ -49,7 +48,7 @@ body {
   background-color: var(--bg-color);
   transition: all 0.3s ease-in-out;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* MINIMALIST BACKGROUND ANIMATION */
@@ -141,7 +140,7 @@ body {
 
 /* Update FAQ badge styles */
 .nav-right .faq-badge {
-  background: #b88746;
+  background: #33595E;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
@@ -160,7 +159,7 @@ body {
 }
 
 [data-theme="dark"] .nav-right .faq-badge {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   color: #222;
   border: none;
 }
@@ -287,7 +286,7 @@ body {
 
 .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-slider {
   transform: translateX(30px);
-  background: #b88746;
+  background: #33595E;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -481,7 +480,7 @@ body {
 }
 
 .trust-badge-icon {
-  color: #b88746;
+  color: #33595E;
   font-size: 1.2em;
   margin-right: 0.5em;
 }
@@ -647,6 +646,7 @@ body {
   box-shadow: none;
   border: none;
   transition: all 0.3s ease-in-out;
+  transform: none;
 }
 
 /* Remove animate-up from teacher-item if present */
@@ -781,10 +781,11 @@ body {
 }
 
 .badge.gold {
-  background: linear-gradient(135deg, var(--accent-color), #f59e0b);
+  background: linear-gradient(135deg, var(--accent-color), #33595E);
 }
 
 [data-theme="dark"] .badge.black {
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   border-style: solid;
   border-color: var(--secondary-color);
 }
@@ -1282,7 +1283,7 @@ body {
 
   /* Ensure FAQ badge and theme toggle keep their styles in mobile */
   .mobile-controls .faq-badge {
-    background: linear-gradient(90deg, #b88746, #fdf5a6);
+    background: linear-gradient(90deg, #33595E, #5a8a92);
     color: #222;
     border: none;
     width: 100px;
@@ -1290,7 +1291,7 @@ body {
     border-radius: 10px;
   }
   [data-theme="dark"] .mobile-controls .faq-badge {
-    background: linear-gradient(90deg, #b88746, #fdf5a6);
+    background: linear-gradient(90deg, #33595E, #5a8a92);
     color: #222;
     border: none;
     width: 100px;
@@ -1313,7 +1314,7 @@ body {
     background: #072c50;
   }
   .mobile-controls .theme-toggle-checkbox:checked + .mobile-controls .theme-toggle-label .theme-toggle-slider {
-    background: #fdf5a6;
+    background: #5a8a92;
   }
 }
 
@@ -1420,7 +1421,7 @@ body {
 }
 
 .hero-accent {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1430,49 +1431,13 @@ body {
 .cta-button.primary:hover,
 .cta-button.secondary:hover,
 .course-btn:hover {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   color: var(--primary-color) !important;
   border: none;
 }
 
-[data-theme="dark"] body,
-[data-theme="dark"] .teachers-container h2,
-[data-theme="dark"] .about-header h2,
-[data-theme="dark"] .about-header p,
-[data-theme="dark"] .about-text p,
-[data-theme="dark"] .teacher-info h3,
-[data-theme="dark"] .teacher-title,
-[data-theme="dark"] .teacher-description,
-[data-theme="dark"] .achievement,
-[data-theme="dark"] .stat-label,
-[data-theme="dark"] .stat-number,
-[data-theme="dark"] .courses-container h2,
-[data-theme="dark"] .course-card h3,
-[data-theme="dark"] .price,
-[data-theme="dark"] .course-card li,
-[data-theme="dark"] .faq-container h2,
-[data-theme="dark"] .faq-question,
-[data-theme="dark"] .faq-answer p,
-[data-theme="dark"] .collaborators-container h2,
-[data-theme="dark"] .contact-left h2,
-[data-theme="dark"] .contact-item span,
-[data-theme="dark"] .footer,
-[data-theme="dark"] .footer-section h3,
-[data-theme="dark"] .footer-section h4,
-[data-theme="dark"] .footer-section p,
-[data-theme="dark"] .footer-section ul li a,
-[data-theme="dark"] .footer-links a {
-  color: #fff !important;
-}
-[data-theme="dark"] .hero-left h1 {
-  color: #fff;
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
-}
 [data-theme="dark"] .hero-accent {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1490,71 +1455,55 @@ body {
 [data-theme="dark"] .footer,
 [data-theme="dark"] .footer-section,
 [data-theme="dark"] .footer-bottom {
-  border-color: #b88746 !important;
-  outline-color: #b88746 !important;
-}
-[data-theme="dark"] .about-form{
-  background-color: var(--card-background);
-}
-/* === DARK MODE OVERRIDES (place at end for specificity) === */
-[data-theme="dark"] {
-  --text-color: #fff;
-}
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4,
-[data-theme="dark"] .contact-item strong {
-  color: #fff !important;
+  border-color: #33595E !important;
+  outline-color: #33595E !important;
 }
 
 [data-theme="dark"] .cta-button.secondary {
-  border: 2px solid #b88746;
+  border: 2px solid #33595E;
 }
-[data-theme="dark"] h2:hover,
-[data-theme="dark"] h3:hover,
-[data-theme="dark"] h4:hover {
-  color: #fff !important;
-}
+
 [data-theme="dark"] .nav-center .nav-menu a::after {
-  background-color: #b88746;
+  background-color: #33595E;
 }
-[data-theme="dark"] .nav-center .nav-menu a:hover {
-  color: #fff;
-}
+
 [data-theme="dark"] .about-header h2::after,
 [data-theme="dark"] .teachers-container h2::after,
 [data-theme="dark"] .courses-container h2::after,
 [data-theme="dark"] .faq-container h2::after {
-  background-color: #b88746;
-}
-[data-theme="dark"] .contact-form input,
-[data-theme="dark"] .contact-form textarea {
-  border-color: transparent;
+  background-color: #33595E;
 }
 [data-theme="dark"] .contact-form input:focus,
 [data-theme="dark"] .contact-form textarea:focus {
-  border-color: #b88746;
-  box-shadow: 0 0 0 3px #b88746;
+  border-color: #33595E;
+  box-shadow: 0 0 0 3px #33595E;
 }
 
-[data-theme="dark"] .contact-form input,
-[data-theme="dark"] .contact-form textarea,
-[data-theme="dark"] .about-form input,
-[data-theme="dark"] .about-form textarea {
-  border-color: #fff !important;
-  background: transparent;
-  color: #fff;
-  box-shadow: none;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-[data-theme="dark"] .contact-form input:focus,
-[data-theme="dark"] .contact-form textarea:focus,
 [data-theme="dark"] .about-form input:focus,
 [data-theme="dark"] .about-form textarea:focus {
-  border-color: #b88746 !important;
-  box-shadow: 0 0 0 3px #b88746;
+  border-color: #33595E !important;
+  box-shadow: 0 0 0 3px #33595E;
   outline: none;
+}
+
+.why-card-icon svg:not([stroke*="url"]) {
+  stroke: #33595E;
+}
+
+[data-theme="dark"] .why-card-number {
+  color: #33595E;
+}
+
+.chat-bubble.assistant {
+  background: linear-gradient(90deg, #33595E, #5a8a92);
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(51, 89, 94, 0.08);
+}
+
+[data-theme="dark"] .chat-bubble.assistant {
+  background: linear-gradient(90deg, #33595E, #5a8a92);
+  color: #fff;
 }
 
 .mission-section {
@@ -1734,7 +1683,7 @@ body {
 }
 /* Fallback for browsers that don't support SVG gradients */
 .why-card-icon svg:not([stroke*="url"]) {
-  stroke: #b88746;
+  stroke: #33595E;
 }
 .why-card-title {
   font-size: 1.25rem;
@@ -1756,7 +1705,7 @@ body {
 }
 [data-theme="dark"] .why-card {
   background: var(--bg-secondary);
-  border-color: #b88746;
+  border-color: #33595E;
 }
 [data-theme="dark"] .why-card-title {
   color: #fff;
@@ -1765,7 +1714,7 @@ body {
   color: #fff;
 }
 [data-theme="dark"] .why-card-number {
-  color: #b88746;
+  color: #33595E;
 }
 @media (max-width: 1100px) {
   .why-different-cards {
@@ -1872,10 +1821,10 @@ body {
   color: var(--text-color);
 }
 .chat-bubble.assistant {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   color: #fff;
   align-self: flex-end;
-  box-shadow: 0 2px 8px rgba(184, 135, 70, 0.08);
+  box-shadow: 0 2px 8px rgba(51, 89, 94, 0.08);
 }
 .chat-label {
   font-size: 0.95rem;
@@ -1927,7 +1876,7 @@ body {
 }
 
 [data-theme="dark"] .chat-bubble.assistant {
-  background: linear-gradient(90deg, #b88746, #fdf5a6);
+  background: linear-gradient(90deg, #33595E, #5a8a92);
   color: #fff;
 }
 

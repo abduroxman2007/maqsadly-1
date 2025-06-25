@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" data-animate="fade-in-up">
       <div className="contact-container">
         <div className="contact-left" data-animate="left">
           <h2>{t('contact-title')}</h2>

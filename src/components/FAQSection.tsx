@@ -15,7 +15,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="faq">
+    <section id="faq" className="faq" data-animate="fade-in-up">
       <div className="faq-container">
         <div data-animate="center">
           <h2>{t('faq-title')}</h2>

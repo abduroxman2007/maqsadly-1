@@ -4,7 +4,7 @@ import { useTranslation } from '../TranslationContext';
 const AboutSection: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" data-animate="fade-in-up">
       <div className="about-container">
         <div className="about-header" data-animate="center">
           <h2>{t('about-title')}</h2>
