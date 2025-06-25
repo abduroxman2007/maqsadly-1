@@ -1201,7 +1201,7 @@ body {
 
   .nav-container {
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
   }
 
   .hero-container {
@@ -1209,6 +1209,10 @@ body {
     text-align: center;
     gap: 2rem;
     padding: 2rem 1rem;
+  }
+
+  .hero-right {
+    display: none;
   }
 
   .hero-left h1 {
@@ -1233,22 +1237,17 @@ body {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 2rem 1rem;
+    gap: 1.5rem;
   }
 
   .teacher-item.reverse {
     direction: ltr;
-  }
-
-  .teacher-image {
-    order: -1;
-  }
-
-  .teacher-item.reverse .teacher-image {
     order: 1;
   }
 
   .teacher-image img {
     height: 300px;
+    object-fit: cover;
   }
 
   .courses-grid {
@@ -1271,14 +1270,18 @@ body {
   }
 
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 
   /* Ensure FAQ badge and theme toggle keep their styles in mobile */
@@ -1304,7 +1307,7 @@ body {
     border: none;
   }
   [data-theme="dark"] .mobile-controls .theme-toggle-label {
-    background: #d1d5db;
+    background: #5a8a92;
     border: none;
   }
   .mobile-controls .theme-toggle-slider {
@@ -1338,7 +1341,8 @@ body {
   .about-header h2,
   .teachers-container h2,
   .courses-container h2,
-  .faq-container h2 {
+  .faq-container h2,
+  .timeline-title {
     font-size: 2rem;
   }
 
